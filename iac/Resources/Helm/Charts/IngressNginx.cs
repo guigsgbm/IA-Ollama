@@ -8,11 +8,13 @@ namespace iac_az_ia_ollama.Resources.Helm.Charts;
 
 public class IngressNginx
 {
+    public Chart chartNginxIngressController { get; }
+
     public IngressNginx(ManagedCluster cluster, Provider provider)
     {
         var config = new Pulumi.Config();
 
-        var ingressControllerNginx = new Chart("ingress-nginx", new ChartArgs()
+        var nginxIngressController = new Chart("ingress-nginx", new ChartArgs()
         {
             Chart = "ingress-nginx",
             Version = "4.9.1",
@@ -25,5 +27,7 @@ public class IngressNginx
             Provider = provider,
             DependsOn = new[] { cluster }
         });
+
+        this.chartNginxIngressController = nginxIngressController;
     }
 }

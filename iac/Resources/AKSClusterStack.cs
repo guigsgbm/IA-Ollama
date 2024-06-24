@@ -82,6 +82,6 @@ public class AKSClusterStack
         });
 
         var nginxIngressController = new IngressNginx(aksClusterStack, k8sProvider);
-        var openWebUIChart = new OpenWebUI(aksClusterStack, k8sProvider);
+        var openWebUIChart = new OpenWebUI(aksClusterStack, nginxIngressController.chartNginxIngressController, k8sProvider);
     }
 }

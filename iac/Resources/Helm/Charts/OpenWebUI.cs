@@ -9,7 +9,7 @@ namespace iac_az_ia_ollama.Resources.Helm.Charts;
 
 public class OpenWebUI
 {
-    public OpenWebUI(ManagedCluster cluster, Provider provider)
+    public OpenWebUI(ManagedCluster cluster, Chart nginxIngressController, Provider provider)
     {
         var config = new Pulumi.Config();
 
@@ -44,7 +44,7 @@ public class OpenWebUI
         }, new ComponentResourceOptions()
         {
             Provider = provider,
-            DependsOn = new[] { cluster }
+            DependsOn = new Resource[] { cluster, nginxIngressController }
         });
     }
 }
