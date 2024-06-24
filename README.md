@@ -19,6 +19,6 @@ az aks get-credentials --resource-group rg_ia_ollama --name aks_ia_ollama --over
 
 kubectl get svc
 ```
-![Logo do Projeto](images/services.png)
+![k8s services](images/services.png)
 
 - O app estara disponivel no EXTERNAL-IP.
