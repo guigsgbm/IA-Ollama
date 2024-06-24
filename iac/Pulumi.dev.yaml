@@ -1,0 +1,14 @@
+config:
+  azure-native:location: BrazilSouth
+  iac-az-ia-ollama:AKSCluster.AgentPool.Count: "1"
+  iac-az-ia-ollama:AKSCluster.AgentPool.MaxCount: "1"
+  iac-az-ia-ollama:AKSCluster.AgentPool.MinCount: "1"
+  iac-az-ia-ollama:AKSCluster.AgentPool.Name: default
+  iac-az-ia-ollama:AKSCluster.AgentPool.VmSize: standard_b4ms
+  iac-az-ia-ollama:AKSCluster.AuthorizedIPRanges:
+    - 191.178.193.113
+    - 192.168.0.39
+  iac-az-ia-ollama:AKSCluster.DnsPrefix: ia-ollama
+  iac-az-ia-ollama:AKSCluster.Name: aks_ia_ollama
+  iac-az-ia-ollama:AKSCluster.SKUTier: Free
+  iac-az-ia-ollama:ResourceGroup.Name: rg_ia_ollama
